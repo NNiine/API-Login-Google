@@ -1,62 +1,62 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="AIzaSyCSA56RA_PNeZ6q4vwTPT-gjhYTpzx6m3U">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-     
-    <style type="text/css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Logar com o facebook </title>
+</head>
+<style type="text/css">
 
-    </style>
-  </head>   
-  <body>   
+</style>
+</head>   
+<body>   
 
-    <div id="fb-root"></div>
+<div id="fb-root"></div>
 
-    <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="true" data-use-continue-as="true"></div>
+<div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="true" data-use-continue-as="true"></div>
 
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '{your-app-id}',
-          cookie     : true,
-          xfbml      : true,
-          version    : '{api-version}'
-        });
-          
-        FB.AppEvents.logPageView();   
-          
-      };
-    
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "https://connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
 
-       
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 
-       FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-       });
+   
 
-       
-      {
-          status: 'connected',
-          authResponse: {
-              accessToken: '...',
-              expiresIn:'...',
-              signedRequest:'...',
-              userID:'...'
-          }
+   FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+   });
+
+   
+  {
+      status: 'connected',
+      authResponse: {
+          accessToken: '...',
+          expiresIn:'...',
+          signedRequest:'...',
+          userID:'...'
       }
-    </script>
+  }
+  
+</script>
 
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v16.0&appId=1055255711992733&autoLogAppEvents=1" nonce="tGuurBuc"></script>
 
-  </body>
+</body>
 </html>
