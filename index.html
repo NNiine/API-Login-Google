@@ -16,6 +16,7 @@
 
 <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="true" data-use-continue-as="true"></div>
 
+
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -36,26 +37,6 @@
      js.src = "https://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-
-   
-
-   FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-   });
-
-   
-  {
-      status: 'connected',
-      authResponse: {
-          accessToken: '...',
-          expiresIn:'...',
-          signedRequest:'...',
-          userID:'...'
-      }
-  }
-  
-  src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v16.0&appId=1055255711992733&autoLogAppEvents=1"
-
 </script>
 
 </body>
